@@ -10,7 +10,8 @@ class EquipeController {
     return res.json(data);
   }
   async remove(req, res) {
-    const data = await Equipe.deleteOne({ _id: req.body._id });
+    console.log(req.body);
+    const data = await Equipe.deleteOne({ _id: req.body.data });
     return res.json(data);
   }
 }

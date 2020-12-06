@@ -5,7 +5,7 @@ const IcSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  aluno: {
+  bolsista: {
     type: String,
     required: true,
   },
@@ -13,10 +13,10 @@ const IcSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  // periodo: {
-  //   type: String,
-  //   required: true,
-  // },
+  periodo: {
+    type: String,
+    required: true,
+  },
 });
 
 module.exports = mongoose.model("Ic", IcSchema);
