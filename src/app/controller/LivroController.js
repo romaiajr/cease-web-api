@@ -9,9 +9,9 @@ class LivroController {
     const data = await Livro.find({});
     return res.json(data);
   }
-  async remove(req, res, id) {
-    const data = await Livro.remove({ _id: id });
-    return data;
+  async remove(req, res) {
+    const data = await Livro.deleteOne({ _id: req.body.data });
+    return res.json(data);
   }
 }
 

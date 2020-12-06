@@ -9,9 +9,9 @@ class CapituloController {
     const data = await Capitulo.find({});
     return res.json(data);
   }
-  async remove(req, res, id) {
-    const data = await Capitulo.remove({ _id: id });
-    return data;
+  async remove(req, res) {
+    const data = await Capitulo.deleteOne({ _id: req.body.data });
+    return res.json(data);
   }
 }
 

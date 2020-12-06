@@ -9,8 +9,8 @@ class IcController {
     const data = await Ic.find({});
     return res.json(data);
   }
-  async remove(req, res, id) {
-    const data = await Ic.remove({ _id: id });
+  async remove(req, res) {
+    const data = await Ic.deleteOne({ _id: req.body.data });
     return res.json(data);
   }
 }

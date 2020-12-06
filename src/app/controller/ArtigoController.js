@@ -10,7 +10,7 @@ class ArtigoController {
     return res.json(data);
   }
   async remove(req, res) {
-    const data = await Artigo.remove({ _id: req.body.id });
+    const data = await Artigo.deleteOne({ _id: req.body.data });
     return res.json(data);
   }
 }

@@ -9,8 +9,8 @@ class EquipeController {
     const data = await Equipe.find({});
     return res.json(data);
   }
-  async remove(req, res, id) {
-    const data = await Equipe.remove({ _id: id });
+  async remove(req, res) {
+    const data = await Equipe.deleteOne({ _id: req.body._id });
     return res.json(data);
   }
 }

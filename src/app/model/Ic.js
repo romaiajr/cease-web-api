@@ -13,10 +13,10 @@ const IcSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  periodo: {
-    type: String,
-    required: true,
-  },
+  // periodo: {
+  //   type: String,
+  //   required: true,
+  // },
 });
 
 module.exports = mongoose.model("Ic", IcSchema);

@@ -7,38 +7,60 @@ const EquipeController = require("./app/controller/EquipeController");
 const CapituloController = require("./app/controller/CapituloController");
 const IcController = require("./app/controller/IcController");
 const AtividadeComplementarController = require("./app/controller/AtividadeComplementarController");
+const EventoController = require("./app/controller/EventoController");
+const FotoController = require("./app/controller/FotoController");
 
 //ROTAS ARTIGOS
-routes.get("/artigos", ArtigoController.index);
-routes.post("/artigos", ArtigoController.store);
-routes.delete("/artigos", ArtigoController.remove);
+routes.post("/artigos-get", ArtigoController.index);
+routes.post("/artigos-add", ArtigoController.store);
+routes.post("/artigos-remove", ArtigoController.remove);
 
 //ROTAS LIVROS
-routes.get("/livros", LivroController.index);
-routes.post("/livros", LivroController.store);
-routes.delete("/livros", LivroController.remove);
+routes.post("/livros-get", LivroController.index);
+routes.post("/livros-add", LivroController.store);
+routes.post("/livros-remove", LivroController.remove);
 
 //ROTAS CAPITULOS
-routes.get("/capitulos", CapituloController.index);
-routes.post("/capitulos", CapituloController.store);
-routes.delete("/capitulos", CapituloController.remove);
+routes.post("/capitulos-get", CapituloController.index);
+routes.post("/capitulos-add", CapituloController.store);
+routes.post("/capitulos-remove", CapituloController.remove);
 
 //ROTAS IC
-routes.get("/iniciacao-cientifica", IcController.index);
-routes.post("/iniciacao-cientifica", IcController.store);
-routes.delete("/iniciacao-cientifica", IcController.remove);
+routes.post("/iniciacao-cientifica-get", IcController.index);
+routes.post("/iniciacao-cientifica-add", IcController.store);
+routes.post("/iniciacao-cientifica-remove", IcController.remove);
 
 //ROTAS ATIVIDADES COMPLEMENTARES
-routes.get("/atividade-complementar", AtividadeComplementarController.index);
-routes.post("/atividade-complementar", AtividadeComplementarController.store);
-routes.delete(
-  "/atividade-complementar",
+routes.post(
+  "/atividade-complementar-get",
+  AtividadeComplementarController.index
+);
+routes.post(
+  "/atividade-complementar-add",
+  AtividadeComplementarController.store
+);
+routes.post(
+  "/atividade-complementar-remove",
   AtividadeComplementarController.remove
 );
+routes.post(
+  "/atividade-complementar-getOne",
+  AtividadeComplementarController.indexOne
+);
+
+//ROTAS EVENTOS
+routes.post("/eventos-get", EventoController.index);
+routes.post("/eventos-add", EventoController.store);
+routes.post("/eventos-remove", EventoController.remove);
+
+//ROTAS FOTOS
+routes.post("/fotos-get", FotoController.index);
+routes.post("/fotos-add", FotoController.store);
+routes.post("/fotos-remove", FotoController.remove);
 
 //ROTAS EQUIPES
-routes.get("/equipe", EquipeController.index);
-routes.post("/equipe", EquipeController.store);
-routes.delete("/equipe", EquipeController.remove);
+routes.post("/equipe-get", EquipeController.index);
+routes.post("/equipe-add", EquipeController.store);
+routes.post("/equipe-remove", EquipeController.remove);
 
 module.exports = routes;

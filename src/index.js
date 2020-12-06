@@ -8,7 +8,10 @@ const app = express();
  *Database Setup
  */
 mongoose
-  .connect(process.env.MONGO_URL || db.uri, { useNewUrlParser: true })
+  .connect(process.env.MONGO_URL || db.uri, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  })
   .then(() => {
     console.log("Connected to database ");
   })
