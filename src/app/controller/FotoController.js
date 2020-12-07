@@ -2,6 +2,7 @@ const Foto = require("../model/Foto");
 
 class FotoController {
   async store(req, res) {
+    console.log(req.body);
     const data = await Foto.create(req.body);
     return res.json(data);
   }

@@ -9,6 +9,10 @@ const FotoSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
+  linkExterno: {
+    type: String,
+    required: false,
+  },
   idEvento: {
     type: String,
     required: true,
