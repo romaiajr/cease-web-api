@@ -7,7 +7,6 @@ class FotoController {
     return res.json(data);
   }
   async index(req, res) {
-    console.log(req.body);
     const data = await Foto.find({ idEvento: req.body.data });
     console.log(data);
     return res.json(data);
