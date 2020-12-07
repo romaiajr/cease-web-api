@@ -70,4 +70,9 @@ routes.post("/equipe-get", EquipeController.index);
 routes.post("/equipe-add", EquipeController.store);
 routes.post("/equipe-remove", EquipeController.remove);
 
+//ROTAS LEITURAS
+routes.post("/leituras-get", EventoController.index);
+routes.post("/leituras-add", EventoController.store);
+routes.post("/leituras-remove", EventoController.remove);
+
 module.exports = routes;
