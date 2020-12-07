@@ -7,7 +7,11 @@ const EventoSchema = new mongoose.Schema({
   },
   idAtividade: {
     type: String,
-    required: true,
+    required: false,
+  },
+  idProjeto: {
+    type: String,
+    required: false,
   },
 });
 

@@ -9,6 +9,7 @@ const IcController = require("./app/controller/IcController");
 const AtividadeComplementarController = require("./app/controller/AtividadeComplementarController");
 const EventoController = require("./app/controller/EventoController");
 const FotoController = require("./app/controller/FotoController");
+const ProjetoController = require("./app/controller/ProjetoController");
 
 //ROTAS ARTIGOS
 routes.post("/artigos-get", ArtigoController.index);
@@ -47,6 +48,12 @@ routes.post(
   "/atividade-complementar-getOne",
   AtividadeComplementarController.indexOne
 );
+
+//ROTAS PROJETOS DE EXTENSÃO
+routes.post("/projetos-get", ProjetoController.index);
+routes.post("/projetos-add", ProjetoController.store);
+routes.post("/projetos-remove", ProjetoController.remove);
+routes.post("/projetos-getOne", ProjetoController.indexOne);
 
 //ROTAS EVENTOS
 routes.post("/eventos-get", EventoController.index);
