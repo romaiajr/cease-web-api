@@ -10,6 +10,7 @@ const AtividadeComplementarController = require("./app/controller/AtividadeCompl
 const EventoController = require("./app/controller/EventoController");
 const FotoController = require("./app/controller/FotoController");
 const ProjetoController = require("./app/controller/ProjetoController");
+const LeituraController = require("./app/controller/LeituraController");
 
 //ROTAS ARTIGOS
 routes.post("/artigos-get", ArtigoController.index);
@@ -71,8 +72,8 @@ routes.post("/equipe-add", EquipeController.store);
 routes.post("/equipe-remove", EquipeController.remove);
 
 //ROTAS LEITURAS
-routes.post("/leituras-get", EventoController.index);
-routes.post("/leituras-add", EventoController.store);
-routes.post("/leituras-remove", EventoController.remove);
+routes.post("/leituras-get", LeituraController.index);
+routes.post("/leituras-add", LeituraController.store);
+routes.post("/leituras-remove", LeituraController.remove);
 
 module.exports = routes;
