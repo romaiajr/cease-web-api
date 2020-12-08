@@ -17,6 +17,10 @@ const IcSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
+  tipo: {
+    type: String,
+    required: true,
+  },
 });
 
 module.exports = mongoose.model("Ic", IcSchema);
