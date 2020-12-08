@@ -16,11 +16,11 @@ class ProjetoController {
   }
   async remove(req, res) {
     const data = await Projeto.deleteOne({ _id: req.body.data });
-    const eventos = await Evento.find({ idProjeto: req.body.data });
-    eventos.forEach(async (evento) => {
-      await Foto.deleteMany({ idEvento: evento._id });
-    });
-    await Evento.deleteMany({ idAtividade: req.body.data });
+    // const eventos = await Evento.find({ idProjeto: req.body.data });
+    // eventos.forEach(async (evento) => {
+    //   await Foto.deleteMany({ idEvento: evento._id });
+    // });
+    // await Evento.deleteMany({ idAtividade: req.body.data });
 
     return res.json(data);
   }
