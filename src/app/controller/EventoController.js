@@ -10,7 +10,6 @@ class EventoController {
     return res.json(data);
   }
   async remove(req, res) {
-    console.log(req.body);
     const data = await Evento.deleteOne({ _id: req.body.data });
     return res.json(data);
   }
