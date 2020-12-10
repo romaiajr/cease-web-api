@@ -27,11 +27,11 @@ const ProjetoSchema = new mongoose.Schema({
   },
   orientador: {
     type: String,
-    required: true,
+    required: false,
   },
   bolsista: {
     type: String,
-    required: true,
+    required: false,
   },
   logo: {
     type: String,

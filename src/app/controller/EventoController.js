@@ -5,8 +5,12 @@ class EventoController {
     const data = await Evento.create(req.body);
     return res.json(data);
   }
-  async index(req, res) {
+  async indexAtv(req, res) {
     const data = await Evento.find({ idAtividade: req.body.data });
+    return res.json(data);
+  }
+  async indexProj(req, res) {
+    const data = await Evento.find({ idProjeto: req.body.data });
     return res.json(data);
   }
   async remove(req, res) {

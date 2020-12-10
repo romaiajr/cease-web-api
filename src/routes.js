@@ -11,6 +11,7 @@ const EventoController = require("./app/controller/EventoController");
 const FotoController = require("./app/controller/FotoController");
 const ProjetoController = require("./app/controller/ProjetoController");
 const LeituraController = require("./app/controller/LeituraController");
+const ProducaoController = require("./app/controller/ProducaoController");
 
 //ROTAS ARTIGOS
 routes.post("/artigos-get", ArtigoController.index);
@@ -57,7 +58,8 @@ routes.post("/projetos-remove", ProjetoController.remove);
 routes.post("/projetos-getOne", ProjetoController.indexOne);
 
 //ROTAS EVENTOS
-routes.post("/eventos-get", EventoController.index);
+routes.post("/eventos-getAtv", EventoController.indexAtv);
+routes.post("/eventos-getProj", EventoController.indexProj);
 routes.post("/eventos-add", EventoController.store);
 routes.post("/eventos-remove", EventoController.remove);
 
@@ -75,5 +77,10 @@ routes.post("/equipe-remove", EquipeController.remove);
 routes.post("/leituras-get", LeituraController.index);
 routes.post("/leituras-add", LeituraController.store);
 routes.post("/leituras-remove", LeituraController.remove);
+
+//ROTAS LEITURAS
+routes.post("/producao-get", ProducaoController.index);
+routes.post("/producao-add", ProducaoController.store);
+routes.post("/producao-remove", ProducaoController.remove);
 
 module.exports = routes;
