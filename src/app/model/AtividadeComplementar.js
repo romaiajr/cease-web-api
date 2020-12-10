@@ -5,10 +5,10 @@ const AtividadeComplementarSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  // descricao: {
-  //   type: String,
-  //   required: true,
-  // },
+  link: {
+    type: String,
+    required: false,
+  },
 });
 
 module.exports = mongoose.model(
