@@ -1,7 +1,13 @@
 class LoginController {
   async login(req, res) {
-    var data = { login: process.env.LOGIN, senha: process.env.SENHA };
-    console.log(data);
+    console.log(req.body);
+    var data;
+    if (
+      req.body.user == process.env.LOGIN &&
+      req.body.senha == process.env.SENHA
+    )
+      data = true;
+    else data = false;
     return res.json(data);
   }
 }
