@@ -19,7 +19,7 @@ const EquipeSchema = new mongoose.Schema({
   },
   lattes: {
     type: String,
-    required: true,
+    required: false,
   },
 });
 

@@ -21,7 +21,7 @@ class ProjetoController {
     eventos.forEach(async (evento) => {
       await Foto.deleteMany({ idEvento: evento._id });
     });
-    await Evento.deleteMany({ idAtividade: req.body.data });
+    await Evento.deleteMany({ idProjeto: req.body.data });
     await Producao.deleteMany({ idProjeto: req.body.data });
     return res.json(data);
   }
