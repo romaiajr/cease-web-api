@@ -12,6 +12,7 @@ const FotoController = require("./app/controller/FotoController");
 const ProjetoController = require("./app/controller/ProjetoController");
 const LeituraController = require("./app/controller/LeituraController");
 const ProducaoController = require("./app/controller/ProducaoController");
+const LoginController = require("./app/controller/LoginController");
 
 //ROTAS ARTIGOS
 routes.post("/artigos-get", ArtigoController.index);
@@ -83,4 +84,5 @@ routes.post("/producao-get", ProducaoController.index);
 routes.post("/producao-add", ProducaoController.store);
 routes.post("/producao-remove", ProducaoController.remove);
 
+routes.post("/login", LoginController.login);
 module.exports = routes;
