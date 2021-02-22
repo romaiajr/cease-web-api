@@ -12,6 +12,8 @@ const FotoController = require("./app/controller/FotoController");
 const ProjetoController = require("./app/controller/ProjetoController");
 const LeituraController = require("./app/controller/LeituraController");
 const ProducaoController = require("./app/controller/ProducaoController");
+const TccController = require("./app/controller/TccController");
+const NoticiaController = require("./app/controller/NoticiaController");
 const LoginController = require("./app/controller/LoginController");
 
 //ROTAS ARTIGOS
@@ -83,6 +85,16 @@ routes.post("/leituras-remove", LeituraController.remove);
 routes.post("/producao-get", ProducaoController.index);
 routes.post("/producao-add", ProducaoController.store);
 routes.post("/producao-remove", ProducaoController.remove);
+
+//ROTAS TCC
+routes.post("/tcc-get", TccController.index);
+routes.post("/tcc-add", TccController.store);
+routes.post("/tcc-remove", TccController.remove);
+
+//ROTAS Noticias
+routes.post("/noticias-get", NoticiaController.index);
+routes.post("/noticias-add", NoticiaController.store);
+routes.post("/noticias-remove", NoticiaController.remove);
 
 routes.post("/login", LoginController.login);
 module.exports = routes;
