@@ -9,7 +9,15 @@ const TccSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  link: {
+  orientador: {
+    type: String,
+    required: true,
+  },
+  ano: {
+    type: String,
+    required: true,
+  },
+  imagem: {
     type: String,
     required: true,
   },
