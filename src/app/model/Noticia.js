@@ -3,11 +3,11 @@ const mongoose = require("mongoose");
 const NoticiaSchema = new mongoose.Schema({
   titulo: {
     type: String,
-    required: true,
+    required: false,
   },
   texto: {
     type: String,
-    required: true,
+    required: false,
   },
   link: {
     type: String,
