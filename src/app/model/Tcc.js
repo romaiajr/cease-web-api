@@ -19,7 +19,7 @@ const TccSchema = new mongoose.Schema({
   },
   imagem: {
     type: String,
-    required: true,
+    required: false,
   },
 });
 
