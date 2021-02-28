@@ -3,7 +3,7 @@ const mongoose = require("mongoose");
 const FotoSchema = new mongoose.Schema({
   legenda: {
     type: String,
-    required: true,
+    required: false,
   },
   link: {
     type: String,
