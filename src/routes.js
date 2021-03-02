@@ -58,7 +58,6 @@ routes.post(
 routes.post("/projetos-get", ProjetoController.index);
 routes.post("/projetos-add", ProjetoController.store);
 routes.post("/projetos-remove", ProjetoController.remove);
-routes.post("/projetos-getOne", ProjetoController.indexOne);
 
 //ROTAS EVENTOS
 routes.post("/eventos-getAtv", EventoController.indexAtv);
